@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/curtiswallen/lesser-miracle-studios.git"
+    "url": "git+ssh://git@github.com/curtiswallen/lesser-miracle.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/curtiswallen/lesser-miracle-studios/issues"
+    "url": "https://github.com/curtiswallen/lesser-miracle/issues"
   },
-  "homepage": "https://github.com/curtiswallen/lesser-miracle-studios#readme",
+  "homepage": "https://github.com/curtiswallen/lesser-miracle#readme",
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^15.3.3",
     "contentful": "^8.5.6",
