@@ -1,0 +1,6 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+[Params]
+	customcss = ['css/normalize.css', 'css/main.css']
+	customjs = ['js/jquery.scrollify.js', 'js/imagesloaded.pkgd.min.js', 'js/app.js']

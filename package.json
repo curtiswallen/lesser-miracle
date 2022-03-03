@@ -1,0 +1,28 @@
+{
+  "name": "lesser-miracle-studios",
+  "version": "1.0.0",
+  "description": "Lesser Miracle Studios",
+  "main": "index.js",
+  "scripts": {
+    "cms:prepare": "node cms-scripts/buildContent.js",
+    "local:serve": "hugo server",
+    "local:start": "npm-run-all -p cms:prepare local:serve",
+    "netlify:serve": "hugo -b $DEPLOY_PRIME_URL",
+    "netlify:build": "npm-run-all cms:prepare netlify:serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/curtiswallen/lesser-miracle-studios.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/curtiswallen/lesser-miracle-studios/issues"
+  },
+  "homepage": "https://github.com/curtiswallen/lesser-miracle-studios#readme",
+  "dependencies": {
+    "@contentful/rich-text-html-renderer": "^15.3.3",
+    "contentful": "^8.5.6",
+    "npm-run-all": "^4.1.5"
+  }
+}

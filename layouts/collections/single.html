@@ -1,0 +1,40 @@
+{{ define "main" }}
+
+  <div id="lesser-logo" onclick="history.back()"><img src="/img/lesser.svg"></div>
+  <div id="miracle-logo" onclick="history.back()"><img src="/img/miracle.svg"></div>
+          
+  {{ $collection := .Params.title }}
+
+  <div class="grid-container">
+
+    <div id="collection-info" class="clearfix">
+
+      <div class="collection-title">
+        {{ if .Params.title }}<p>{{ .Params.title }}</p>{{ end }}
+      </div>
+
+      <div class="collection-description">
+        {{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
+      </div> 
+
+    </div>
+
+    <div id="collection-images">
+    {{ range where (where .Site.Pages "Section" "pieces") "Params.collectionproject.fields.title" "=" $collection }}
+
+      {{ $description := .Params.description }}
+      {{ $title := .Params.title }}
+      {{ $slug := .Params.slug }}
+      <div class="collection-section-title">{{ $title }}</div>
+      <div class="grid">
+        {{ range .Params.images }}
+          <div class="grid-item"><a data-fancybox="{{ $slug }}-grid" data-caption="{{ $description }}" href="{{ .fields.file.url }}"><img src="{{ .fields.file.url }}"></a></div>
+        {{ end }}
+      </div>
+                
+    {{ end }}
+    </div>
+
+  </div>
+
+{{ end }}

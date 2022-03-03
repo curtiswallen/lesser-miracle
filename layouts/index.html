@@ -1,0 +1,52 @@
+{{ define "main" }}
+
+    <div id="home" class="scroll-section" data-section-name="index">
+      <div class="big-logo">
+        <img class="lms-logo" src="img/lms-logo.svg">
+      </div>
+    </div>
+
+    <div id="collection" class="scroll-section" data-section-name="collection">
+      
+      <div class="collection-name">
+        <img class="lms-mark" src="img/lms-mark.svg">
+      </div>
+      
+      <div class="floaters">
+        {{ range first 1 (where .Site.Pages "Section" "collections").ByDate.Reverse }}
+
+          {{ $slug := .Params.slug }}
+
+          {{ range .Params.floaterImages }}
+            <div class='rf'><a href="collections/{{ $slug }}"><img src="{{ .fields.file.url }}" width="300px"></a></div>
+          {{ end }}
+
+        {{ end }}
+      </div>
+
+    </div>
+
+    <div id="archive" class="scroll-section" data-section-name="archive">
+      
+      <div id="lists">
+        <div id="collections-list">
+          Collections
+          <ul>
+            {{ range after 1 (where .Site.Pages "Section" "collections").ByDate.Reverse }}
+              <li><a href="collections/{{ .Params.slug }}">{{ .Params.title }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+        <div id="projects-list">
+          Projects
+          <ul>
+            {{ range (where .Site.Pages "Section" "projects").ByDate.Reverse }}
+              <li><a href="projects/{{ .Params.slug }}">{{ .Params.title }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+{{ end }}

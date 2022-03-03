@@ -1,0 +1,1 @@
+{"title":"About","description":"Lesser Miracle is a collaborative design practice between partners Mischa Langley and Vince Patti, based in Brooklyn, NY. Wood, metal, textile and glass are combined using modern and traditional techniques to reference archaic and brutal forms."}
