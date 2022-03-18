@@ -1,1 +1,1 @@
-{"title":"Contact","description":"This is the contact page."}
+{"title":"Contact","description":"lessermiraclestudio@gmail.com\n\n<a href=\"https://www.instagram.com/lessermiracle/\" target=\"_blank\">@lessermiracle</a>"}

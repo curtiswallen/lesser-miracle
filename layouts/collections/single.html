@@ -1,23 +1,28 @@
 {{ define "main" }}
 
-  <div id="lesser-logo" onclick="history.back()"><img src="/img/lesser.svg"></div>
-  <div id="miracle-logo" onclick="history.back()"><img src="/img/miracle.svg"></div>
-          
   {{ $collection := .Params.title }}
+  {{ $maincoll := newScratch }}
+  {{ range first 1 (where .Site.Pages "Section" "collections").ByDate.Reverse }}
+    {{ $maincoll.Set "title" .Params.title }}
+  {{ end }}
+
+  {{ if eq $collection ($maincoll.Get "title") }}
+    <div id="lesser-logo"><a href="../../#collection"><img class="side-logo" src="{{ .Site.Params.lessersvg | absURL }}"></a></div>
+    <div id="miracle-logo"><a href="../../#collection"><img class="side-logo" src="{{ .Site.Params.miraclesvg | absURL }}"></a></div>
+  {{ else }}
+    <div id="lesser-logo"><a href="../../#archive"><img class="side-logo" src="{{ .Site.Params.lessersvg | absURL }}"></a></div>
+    <div id="miracle-logo"><a href="../../#archive"><img class="side-logo" src="{{ .Site.Params.miraclesvg | absURL }}"></a></div>
+  {{ end }}
 
   <div class="grid-container">
 
-    <div id="collection-info" class="clearfix">
-
-      <div class="collection-title">
-        {{ if .Params.title }}<p>{{ .Params.title }}</p>{{ end }}
-      </div>
-
-      <div class="collection-description">
-        {{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
-      </div> 
-
+    <div class="collection-title">
+      {{ if .Params.title }}<p>{{ .Params.title }}</p>{{ end }}
     </div>
+
+    <div class="collection-description">
+      {{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
+    </div> 
 
     <div id="collection-images">
     {{ range where (where .Site.Pages "Section" "pieces") "Params.collectionproject.fields.title" "=" $collection }}
@@ -27,7 +32,7 @@
       {{ $slug := .Params.slug }}
       <div class="collection-section-title">{{ $title }}</div>
       <div class="grid">
-        {{ range .Params.images }}
+        {{ range first 3 .Params.images }}
           <div class="grid-item"><a data-fancybox="{{ $slug }}-grid" data-caption="{{ $description }}" href="{{ .fields.file.url }}"><img src="{{ .fields.file.url }}"></a></div>
         {{ end }}
       </div>

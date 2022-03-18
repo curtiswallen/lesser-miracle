@@ -1,80 +1,80 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>http://example.org/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>Lesser Miracle Studios</title>
+    <link>https://www.lessermiracle.com/</link>
+    <description>Recent content on Lesser Miracle Studios</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://www.lessermiracle.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>http://example.org/about/about/</link>
+      <link>https://www.lessermiracle.com/about/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/about/about/</guid>
+      <guid>https://www.lessermiracle.com/about/about/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Collection 2</title>
-      <link>http://example.org/collections/collection-2/</link>
+      <link>https://www.lessermiracle.com/collections/collection-2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/collections/collection-2/</guid>
+      <guid>https://www.lessermiracle.com/collections/collection-2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>http://example.org/contact/contact/</link>
+      <link>https://www.lessermiracle.com/contact/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/contact/contact/</guid>
+      <guid>https://www.lessermiracle.com/contact/contact/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dining Table, Acer japonicum Maple, 104 x 72 x 96&#34;</title>
-      <link>http://example.org/pieces/piece-1/</link>
+      <link>https://www.lessermiracle.com/pieces/piece-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/pieces/piece-1/</guid>
+      <guid>https://www.lessermiracle.com/pieces/piece-1/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fall/Winter 2021</title>
-      <link>http://example.org/collections/collection-1/</link>
+      <link>https://www.lessermiracle.com/collections/collection-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/collections/collection-1/</guid>
+      <guid>https://www.lessermiracle.com/collections/collection-1/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Project 1</title>
-      <link>http://example.org/projects/project-1/</link>
+      <link>https://www.lessermiracle.com/projects/project-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/projects/project-1/</guid>
+      <guid>https://www.lessermiracle.com/projects/project-1/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Project 2</title>
-      <link>http://example.org/projects/project-2/</link>
+      <link>https://www.lessermiracle.com/projects/project-2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/projects/project-2/</guid>
+      <guid>https://www.lessermiracle.com/projects/project-2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Storage Box, Cedar and pine, 72 x 36 x 42&#34;</title>
-      <link>http://example.org/pieces/piece-2/</link>
+      <link>https://www.lessermiracle.com/pieces/piece-2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/pieces/piece-2/</guid>
+      <guid>https://www.lessermiracle.com/pieces/piece-2/</guid>
       <description></description>
     </item>
     

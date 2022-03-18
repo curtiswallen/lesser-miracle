@@ -13,7 +13,7 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
   {{ range .Site.Params.customcss }}
-    <link rel="stylesheet" href="{{ . | relURL }}">
+    <link rel="stylesheet" href="{{ . | absURL }}">
   {{- end }}
 
   <link rel="preconnect" href="https://fonts.googleapis.com">

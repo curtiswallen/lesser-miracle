@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Collections on My New Hugo Site</title>
-    <link>http://example.org/collections/</link>
-    <description>Recent content in Collections on My New Hugo Site</description>
+    <title>Collections on Lesser Miracle Studios</title>
+    <link>https://www.lessermiracle.com/collections/</link>
+    <description>Recent content in Collections on Lesser Miracle Studios</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://example.org/collections/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://www.lessermiracle.com/collections/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Collection 2</title>
-      <link>http://example.org/collections/collection-2/</link>
+      <link>https://www.lessermiracle.com/collections/collection-2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/collections/collection-2/</guid>
+      <guid>https://www.lessermiracle.com/collections/collection-2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fall/Winter 2021</title>
-      <link>http://example.org/collections/collection-1/</link>
+      <link>https://www.lessermiracle.com/collections/collection-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/collections/collection-1/</guid>
+      <guid>https://www.lessermiracle.com/collections/collection-1/</guid>
       <description></description>
     </item>
     

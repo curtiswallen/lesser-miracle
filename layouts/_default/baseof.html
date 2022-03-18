@@ -9,7 +9,7 @@
 
       <div id="contact-content" class="hidden">
         {{ range where .Site.Pages "Section" "contact" }}
-          {{ .Params.description }}
+          {{ .RenderString .Params.description }}
         {{ end }}
       </div>
 
@@ -28,7 +28,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   {{ range .Site.Params.customjs }}
-    <script type="text/javascript" src="{{ . | relURL }}"></script>
+    <script type="text/javascript" src="{{ . | absURL }}"></script>
   {{- end }}
 
   </body>

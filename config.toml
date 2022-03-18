@@ -1,6 +1,12 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://www.lessermiracle.com'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Lesser Miracle Studios'
 [Params]
 	customcss = ['css/normalize.css', 'css/main.css']
 	customjs = ['js/jquery.scrollify.js', 'js/imagesloaded.pkgd.min.js', 'js/app.js']
+	lessersvg = 'img/lesser.svg'
+	miraclesvg = 'img/miracle.svg'
+[markup]
+	[markup.goldmark]
+		[markup.goldmark.renderer]
+			unsafe = true

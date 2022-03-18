@@ -11,6 +11,7 @@
       <div class="collection-name">
         <img class="lms-mark" src="img/lms-mark.svg">
       </div>
+      <div class="collection-text">Collection</div>
       
       <div class="floaters">
         {{ range first 1 (where .Site.Pages "Section" "collections").ByDate.Reverse }}
@@ -27,6 +28,8 @@
     </div>
 
     <div id="archive" class="scroll-section" data-section-name="archive">
+
+    	<div class="archive-text">Archive</div>
       
       <div id="lists">
         <div id="collections-list">

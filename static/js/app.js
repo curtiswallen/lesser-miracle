@@ -1,5 +1,21 @@
 $(document).ready(function() {
     $('.rf').each(function() {
+    		var img = $(this).find('img');
+
+    		var ih = img.height();
+    		var iw = img.width();
+
+    		var h = $(window).height() - ih;
+    		var w = $(window).width() - iw;
+
+    		var nh = Math.floor(Math.random() * h);
+    		var nw = Math.floor(Math.random() * w);
+
+    		$(this).css('top',nh);
+    		$(this).css('left',nw);
+    })
+
+    $('.rf').each(function() {
         animateDiv($(this));
     })
 
@@ -70,13 +86,8 @@ $(document).ready(function() {
             $(".floaters").removeClass("active-floaters");
             $(".big-logo").removeClass("active-logo");
             var collectionId = panels[i].attr("id");
-            if ($("#" + collectionId + " .grid-container").hasClass("active-grid")) {
-                $("#" + collectionId + " .floaters").removeClass("active-floaters");
-                $("#" + collectionId + " .collection-name").removeClass("active-collection");
-            } else {
-                $("#" + collectionId + " .floaters").addClass("active-floaters");
-                $("#" + collectionId + " .collection-name").addClass("active-collection");
-            }
+            $("#" + collectionId + " .floaters").addClass("active-floaters");
+            $(".collection-name").addClass("active-collection");
             if (collectionId === "home") {
                 $(".big-logo").addClass("active-logo");
                 $(".collection-name").css("position", "absolute");
