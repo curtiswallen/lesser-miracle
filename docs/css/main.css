@@ -434,3 +434,17 @@ div.rf {
 #miracle-logo img {
 	width: 60px;
 }
+
+@media only screen and (max-device-width: 600px) {
+
+	.lms-logo {
+		width: 95%;
+	}
+
+	#about-content,
+	#contact-content {
+		width: 80%;
+		font-size: .75em;
+	}
+
+    }
