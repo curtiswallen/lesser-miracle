@@ -93,6 +93,11 @@ ol, ul {
 .lms-logo {
 	height: 100px;
   z-index: 5;
+  display: inline-block;
+}
+
+.lms-logo-mobile {
+	display: none
 }
 
 .lms-mark {
@@ -437,14 +442,22 @@ div.rf {
 
 @media only screen and (max-device-width: 600px) {
 
+	#home {
+		width: 100%;
+	}
+
 	.lms-logo {
-		width: 95%;
+		display: none;
+	}
+
+	.lms-logo-mobile {
+		display: inline-block;
+		width: 90%;
 	}
 
 	#about-content,
 	#contact-content {
 		width: 80%;
-		font-size: .75em;
 	}
 
     }
