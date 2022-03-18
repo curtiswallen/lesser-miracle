@@ -113,7 +113,7 @@ $(document).ready(function() {
 
             pagination += "</ul>";
 
-            $("#home").append(pagination);
+            /* $("#home").append(pagination); */
             $(".pagination a").on("click",$.scrollify.move);
         }
     });
