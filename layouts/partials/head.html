@@ -12,9 +12,8 @@
   <link rel="manifest" href="/site.webmanifest">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
-  {{ range .Site.Params.customcss }}
-    <link rel="stylesheet" href="{{ . | relURL }}">
-  {{- end }}
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
