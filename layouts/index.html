@@ -44,7 +44,7 @@
           Projects
           <ul>
             {{ range (where .Site.Pages "Section" "projects").ByDate.Reverse }}
-              <li>{{ if eq .Params.externalLinkDirect True }}<a href="{{ .Params.externalLink }}">{{ else }}<a href="projects/{{ .Params.slug }}">{{ end }}{{ .Params.title }}</a></li>
+              <li>{{ if .Params.externalLinkDirect }}<a href="{{ .Params.externalLink }}">{{ else }}<a href="projects/{{ .Params.slug }}">{{ end }}{{ .Params.title }}</a></li>
             {{ end }}
           </ul>
         </div>
