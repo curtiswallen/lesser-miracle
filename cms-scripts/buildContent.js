@@ -55,7 +55,6 @@ client.getEntries({
 			fs.mkdirSync(dir, { recursive: true });
 		}
 
-
 		let project = {}
 		project.title = entry.fields.title;
 		project.description = entry.fields.description;
