@@ -19,6 +19,10 @@ client.getEntries({
   entries.items.forEach(function (entry) {
     let dir = 'content/collections/'
 
+    if (!fs.existsSync(dir)){
+				fs.mkdirSync(dir, { recursive: true });
+		}
+
 		let collection = {}
 		collection.title = entry.fields.title;
 		collection.description = entry.fields.description;
@@ -46,6 +50,11 @@ client.getEntries({
 
   entries.items.forEach(function (entry) {
     let dir = 'content/projects/'
+
+    if (!fs.existsSync(dir)){
+			fs.mkdirSync(dir, { recursive: true });
+		}
+
 
 		let project = {}
 		project.title = entry.fields.title;
@@ -76,6 +85,10 @@ client.getEntries({
   entries.items.forEach(function (entry) {
     let dir = 'content/pieces/'
 
+    if (!fs.existsSync(dir)){
+			fs.mkdirSync(dir, { recursive: true });
+		}
+
 		let piece = {}
 		piece.title = entry.fields.title;
 		piece.description = entry.fields.description;
@@ -104,6 +117,10 @@ client.getEntries({
   entries.items.forEach(function (entry) {
     let dir = 'content/about/'
 
+    if (!fs.existsSync(dir)){
+			fs.mkdirSync(dir, { recursive: true });
+		}
+
 		let about = {}
 		about.title = entry.fields.aboutTitle;
 		about.description = entry.fields.about;
@@ -128,6 +145,10 @@ client.getEntries({
 
   entries.items.forEach(function (entry) {
     let dir = 'content/contact/'
+
+    if (!fs.existsSync(dir)){
+			fs.mkdirSync(dir, { recursive: true });
+		}
 
 		let contact = {}
 		contact.title = entry.fields.contactTitle;
