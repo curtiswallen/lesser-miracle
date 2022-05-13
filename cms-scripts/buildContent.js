@@ -59,7 +59,7 @@ client.getEntries({
 		project.title = entry.fields.title;
 		project.description = entry.fields.description;
 		project.externalLink = entry.fields.externalLink;
-		project.externalLinkDirect = entry.fields.enternalLinkDirect;
+		project.externalLinkDirect = entry.fields.externalLinkDirect;
 		project.slug = entry.fields.slug;
 		
 		let JSONproject = JSON.stringify(project);

@@ -1,1 +1,1 @@
-{"title":"Project 2","description":"This is project 2.","slug":"project-2"}
+{"title":"Singers Bar","description":"This is Project 1.","externalLink":"https://www.singersny.com/","externalLinkDirect":true,"slug":"project-2"}

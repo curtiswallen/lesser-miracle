@@ -1,1 +1,1 @@
-{"title":"Project 1","description":"This is Project 1.","slug":"project-1"}
+{"title":"David Lewis Gallery","description":"This is project 2.","externalLink":"https://www.davidlewisgallery.com/exhibitions/lesser-miracle","externalLinkDirect":true,"slug":"project-1"}
