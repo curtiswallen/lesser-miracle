@@ -350,6 +350,7 @@ div.rf {
 	opacity: 0;
 	display: inline-block;
 	width: 70%;
+	padding-bottom: 100px;
 }
 
 .grid {
@@ -367,7 +368,7 @@ div.rf {
 }
 
 .grid-item img {
-	max-height: 14vh;
+	max-height: 30vh;
 }
 
 #about-content {

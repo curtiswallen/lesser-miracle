@@ -2,6 +2,7 @@ const contentful = require('contentful')
 const richText = require('@contentful/rich-text-html-renderer')
 const https = require('http')
 const fs = require('fs')
+const path = require('path')
 
 const client = contentful.createClient({
   space: 'iwfncpxvalg0',
@@ -68,6 +69,43 @@ client.getEntries({
     			throw err;
 			}
 				console.log(entry.fields.title+" project data is saved.");
+		});
+  })
+})
+.catch(console.error);
+
+client.getEntries({
+  limit: 1000,
+  'content_type': 'press'
+})
+.then(function (entries) {
+
+	console.log("############## Processing Press Content ###############");
+
+  entries.items.forEach(function (entry) {
+    let dir = 'content/press/'
+
+    fs.readdir(dir, (err, files) => {
+  		if (err) throw err;
+
+  		for (const file of files) {
+    		fs.unlink(path.join(dir, file), err => {
+      		if (err) throw err;
+    		});
+  		}
+		})
+
+		let press = {}
+		press.title = entry.fields.title;
+		press.externalLink = entry.fields.externalLink;
+		press.slug = entry.fields.slug;
+		
+		let JSONpress = JSON.stringify(press);
+        fs.writeFile(dir+entry.fields.slug+'-'+Math.random()+'.md', JSONpress, (err) => {
+			if (err) {
+    			throw err;
+			}
+				console.log(entry.fields.title+" press data is saved.");
 		});
   })
 })

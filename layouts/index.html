@@ -8,10 +8,16 @@
 
     <div id="collection" class="scroll-section" data-section-name="collection">
       
+      
       <div class="collection-name">
         <img class="lms-mark" src="img/lms-mark.svg">
       </div>
-      <div class="collection-text">Collection</div>
+
+      {{ range first 1 (where .Site.Pages "Section" "collections").ByDate.Reverse }}
+      <a href="collections/{{ .Params.slug }}">
+        <div class="collection-text">{{ .Params.title }}</div>
+      </a>
+      {{ end }}
       
       <div class="floaters">
         {{ range first 1 (where .Site.Pages "Section" "collections").ByDate.Reverse }}
@@ -19,7 +25,7 @@
           {{ $slug := .Params.slug }}
 
           {{ range .Params.floaterImages }}
-            <div class='rf'><a href="collections/{{ $slug }}"><img src="{{ .fields.file.url }}" width="300px"></a></div>
+            <div class='rf'><a href="collections/{{ $slug }}"><img src="{{ .fields.file.url }}?w=300&q=80" width="300px"></a></div>
           {{ end }}
 
         {{ end }}
@@ -29,14 +35,14 @@
 
     <div id="archive" class="scroll-section" data-section-name="archive">
 
-    	<div class="archive-text">Archive</div>
+    	<div class="archive-text"></div>
       
       <div id="lists">
         <div id="collections-list">
-          Collections
+          Press
           <ul>
-            {{ range after 1 (where .Site.Pages "Section" "collections").ByDate.Reverse }}
-              <li><a href="collections/{{ .Params.slug }}">{{ .Params.title }}</a></li>
+            {{ range (where .Site.Pages "Section" "press").ByDate.Reverse }}
+              <li><a href="{{ .Params.externalLink }}" target="_blank">{{ .Params.title }}</a></li>
             {{ end }}
           </ul>
         </div>
@@ -44,7 +50,7 @@
           Projects
           <ul>
             {{ range (where .Site.Pages "Section" "projects").ByDate.Reverse }}
-              <li>{{ if .Params.externalLinkDirect }}<a href="{{ .Params.externalLink }}">{{ else }}<a href="projects/{{ .Params.slug }}">{{ end }}{{ .Params.title }}</a></li>
+              <li>{{ if .Params.externalLinkDirect }}<a href="{{ .Params.externalLink }}" target="_blank">{{ else }}<a href="projects/{{ .Params.slug }}">{{ end }}{{ .Params.title }}</a></li>
             {{ end }}
           </ul>
         </div>

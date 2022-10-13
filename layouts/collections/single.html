@@ -25,19 +25,25 @@
     </div> 
 
     <div id="collection-images">
+    <div class="grid">
     {{ range where (where .Site.Pages "Section" "pieces") "Params.collectionproject.fields.title" "=" $collection }}
 
       {{ $description := .Params.description }}
       {{ $title := .Params.title }}
       {{ $slug := .Params.slug }}
-      <div class="collection-section-title">{{ $title }}</div>
-      <div class="grid">
-        {{ range first 3 .Params.images }}
-          <div class="grid-item"><a data-fancybox="{{ $slug }}-grid" data-caption="{{ $description }}" href="{{ .fields.file.url }}"><img src="{{ .fields.file.url }}"></a></div>
+      
+        {{ range first 1 .Params.images }}
+          <div class="grid-item">
+            <a data-fancybox="{{ $slug }}-grid" data-caption="{{ $description }}" href="{{ .fields.file.url }}?h=1200&q=90"><img src="{{ .fields.file.url }}?h=500&q=80"></a></div>
         {{ end }}
-      </div>
+        {{ range after 1 .Params.images }}
+          <div class="grid-item hidden">
+            <a data-fancybox="{{ $slug }}-grid" data-caption="{{ $description }}" href="{{ .fields.file.url }}?h=1200&q=90"><img src="{{ .fields.file.url }}?h=500&q=80"></a></div>
+        {{ end }}
+     
                 
     {{ end }}
+  </div>
     </div>
 
   </div>
